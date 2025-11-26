@@ -28,6 +28,8 @@ app.use('/comment',comment)
 app.get('/home',(req,res)=>{
     res.send('running')
 })
+app.get('/',(req,res)=>{
+    res.send('successfully')
+})
 
-
-app.listen(3000)
+app.listen(process.env.port)
