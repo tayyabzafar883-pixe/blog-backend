@@ -29,4 +29,5 @@ app.get('/home',(req,res)=>{
 })
 
 
-app.listen(process.env.port)
+
+module.exports = app;
