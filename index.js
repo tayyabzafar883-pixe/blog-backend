@@ -16,8 +16,7 @@ dbConnection()
 app.use(cookie())
 app.use(express.json())
 app.use(cors({
-origin:'https://frontendblog-six.vercel.app',
-  
+    origin:'http://localhost:5173',
     credentials:true
 }))
 app.use('/user',userRoutes)
@@ -28,8 +27,6 @@ app.use('/comment',comment)
 app.get('/home',(req,res)=>{
     res.send('running')
 })
-app.get('/',(req,res)=>{
-    res.send('successfully')
-})
+
 
 app.listen(process.env.port)
